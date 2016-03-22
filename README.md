@@ -9,6 +9,9 @@ RelativePanel UX Design / Template
 # Relative Panel
 > Relies on relative panel to mantain aspect ratio across multiple devices / resolutions.
 
+# Gradients
+> Uses gradients for nice visuals.
+
 ----
 
 Credit:
