@@ -83,5 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
+    <Page Include="TrackList.xaml" />
   </ItemGroup>
 </Project>

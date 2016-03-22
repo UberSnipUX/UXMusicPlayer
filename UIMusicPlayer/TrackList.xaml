@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="UIMusicPlayer.TrackList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UIMusicPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+            <RelativePanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#4C2B303D" Offset="0.403"/>
+                    <GradientStop Color="#CC2B303D" Offset="0.685"/>
+                    <GradientStop Color="#FF2B303D" Offset="0.006"/>
+                    <GradientStop Color="#CF2B303D" Offset="0.276"/>
+                    <GradientStop Color="#B82B303D" Offset="0.558"/>
+                    <GradientStop Color="#FF2B303D" Offset="0.842"/>
+                </LinearGradientBrush>
+            </RelativePanel.Background>
+
+            <Image Margin="0,0,0,0" Source="Assets/wallpaper.jpg" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" Stretch="UniformToFill" />
+
+
+            <RelativePanel x:Name="Header"  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
+                <Image RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="False" Source="Assets/ic_menu_flat.png" HorizontalAlignment="Left" Width="20" Height="7" Margin="15,13,0,0" />
+                <TextBlock Text="Songs" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Foreground="White" Margin="0,5" />
+                <Image RelativePanel.AlignRightWithPanel="True" Source="Assets/ic_menu_flat.png" HorizontalAlignment="Left" Width="20" Height="7" Margin="0,13,15,0" />
+
+            </RelativePanel>
+
+            <RelativePanel RelativePanel.Below="Header" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+                <ListView x:Name="listView" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" Background="#CC2B303D">
+                    <ListViewItem Background="#E52B303D" Width="{Binding ActualWidth, ElementName=listView, Mode=OneWay}">
+                        <RelativePanel RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Margin="-12,0,-348,0" BorderThickness="1,1,1,1">
+                            <TextBlock Text="Don't forget about us" x:Name="song_title" Margin="5,0,0,0" FontWeight="Bold" Foreground="White" />
+                            <TextBlock RelativePanel.Below="song_title" Text="Mariah Carey" Margin="5,0,0,0" Foreground="White" />
+                            <TextBlock x:Name="song_time" RelativePanel.LeftOf="track_menu" RelativePanel.AlignTopWithPanel="True" Text="4:51" Foreground="White" Margin="0,0,10,0" />
+                            <Image RelativePanel.Below="track_menu" RelativePanel.AlignLeftWith="song_time" RelativePanel.AlignBottomWithPanel="True" Source="Assets/ic_volume_bars.png" Width="15" Margin="5,0,10,0" />
+                            <Image x:Name="track_menu"  Source="Assets/ic_menu_p.png" Width="4" RelativePanel.AlignRightWithPanel="True" Margin="0,5,5,0" />
+                        </RelativePanel>
+                    </ListViewItem>
+
+                    <ListViewItem Background="#E52B303D" Width="{Binding ActualWidth, ElementName=listView, Mode=OneWay}">
+                        <RelativePanel RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Margin="-12,0,-348,0" BorderThickness="1,1,1,1">
+                            <TextBlock Text="If you had my love" x:Name="song_title2" Margin="5,0,0,0" FontWeight="Bold" Foreground="White" />
+                            <TextBlock RelativePanel.Below="song_title2" Text="Jennifer Lopez" Margin="5,0,0,0" Foreground="White" />
+                            <TextBlock x:Name="song_time2" RelativePanel.LeftOf="track_menu2" RelativePanel.AlignTopWithPanel="True" Text="3:45" Foreground="White" Margin="0,0,10,0" />
+                            <Image x:Name="track_menu2"  Source="Assets/ic_menu_p.png" Width="4" RelativePanel.AlignRightWithPanel="True" Margin="0,5,5,0" />
+                        </RelativePanel>
+                    </ListViewItem>
+
+                    <ListViewItem Background="#E52B303D" Width="{Binding ActualWidth, ElementName=listView, Mode=OneWay}">
+                        <RelativePanel RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" Margin="-12,0,-348,0" BorderThickness="1,1,1,1">
+                            <TextBlock Text="Hello" x:Name="song_title3" Margin="5,0,0,0" FontWeight="Bold" Foreground="White" />
+                            <TextBlock RelativePanel.Below="song_title3" Text="Adele" Margin="5,0,0,0" Foreground="White" />
+                            <TextBlock x:Name="song_time3" RelativePanel.LeftOf="track_menu3" RelativePanel.AlignTopWithPanel="True" Text="3:22" Foreground="White" Margin="0,0,10,0" />
+                            <Image x:Name="track_menu3"  Source="Assets/ic_menu_p.png" Width="4" RelativePanel.AlignRightWithPanel="True" Margin="0,5,5,0" />
+                        </RelativePanel>
+                    </ListViewItem>
+                </ListView>
+
+
+            </RelativePanel>
+
+        </RelativePanel>
+
+    </Grid>
+</Page>

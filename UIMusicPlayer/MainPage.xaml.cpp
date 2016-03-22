@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "MainPage.xaml.h"
+#include "TrackList.xaml.h"
 
 using namespace UIMusicPlayer;
 
@@ -24,4 +25,12 @@ using namespace Windows::UI::Xaml::Navigation;
 MainPage::MainPage()
 {
 	InitializeComponent();
+	Windows::UI::Core::SystemNavigationManager::GetForCurrentView()->AppViewBackButtonVisibility = Windows::UI::Core::AppViewBackButtonVisibility::Collapsed;
+
+}
+
+
+void UIMusicPlayer::MainPage::Image_PointerReleased(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
+{
+	this->Frame->Navigate(TrackList::typeid);
 }

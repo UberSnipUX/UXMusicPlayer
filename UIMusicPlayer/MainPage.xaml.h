@@ -17,5 +17,7 @@ namespace UIMusicPlayer
 	public:
 		MainPage();
 
+	private:
+		void Image_PointerReleased(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e);
 	};
 }
