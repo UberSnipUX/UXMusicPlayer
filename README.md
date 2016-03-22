@@ -4,7 +4,7 @@ From mockup to UX (Windows Universal Apps 10)
 RelativePanel UX Design / Template
 
 
-![ux_ubersnip](http://api.ubersnip.com/Assets/uxmusicapp.jpg)
+![ux_ubersnip](http://api.ubersnip.com/Assets/uxmusicapp2.gif)
 
 # Relative Panel
 > Relies on relative panel to mantain aspect ratio across multiple devices / resolutions.
