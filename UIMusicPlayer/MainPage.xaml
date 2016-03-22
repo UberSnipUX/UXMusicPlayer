@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="UIMusicPlayer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UIMusicPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <RelativePanel Margin="0">
+
+            <Image Margin="0,0,0,0" Source="Assets/wallpaper.jpg" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True" Stretch="UniformToFill" />
+            <RelativePanel RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
+                <RelativePanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#4C2B303D" Offset="0.403"/>
+                        <GradientStop Color="#CC2B303D" Offset="0.685"/>
+                        <GradientStop Color="#FF2B303D" Offset="0.006"/>
+                        <GradientStop Color="#CF2B303D" Offset="0.276"/>
+                        <GradientStop Color="#B82B303D" Offset="0.558"/>
+                        <GradientStop Color="#FF2B303D" Offset="0.842"/>
+                    </LinearGradientBrush>
+                </RelativePanel.Background>
+
+                <Image x:Name="ic_nowplaying" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="False" Source="Assets/ic_nowplaying.png" HorizontalAlignment="Left" Width="41" Height="40" Margin="15,15,0,0" />
+                <TextBlock RelativePanel.RightOf="ic_nowplaying" RelativePanel.AlignTopWith="ic_nowplaying" RelativePanel.AlignBottomWith="ic_nowplaying" x:Name="tb_nowplaying" TextWrapping="Wrap" Text="Now Playing" TextAlignment="DetectFromContent" LineHeight="54.667" FontSize="33.333" Margin="20,22,0,0" Foreground="White" FontFamily="Gabriola"/>
+                <Image RelativePanel.RightOf="tb_nowplaying" RelativePanel.AlignTopWith="ic_nowplaying" RelativePanel.AlignBottomWith="ic_nowplaying" Source="Assets/ic_eq.png" Margin="20,15,0,0" />
+                <Image RelativePanel.AlignTopWith="ic_nowplaying" RelativePanel.AlignBottomWith="ic_nowplaying" RelativePanel.AlignRightWithPanel="True" Source="Assets/ic_menu.png" Margin="0,15,25,0" />
+                <Image x:Name="ic_wallpaper" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="Assets/wallpaper.jpg" Margin="0,-100,0,0" Width="200" Height="200" />
+                <TextBlock x:Name="ic_tracktitle" Text="Do you still love me?" RelativePanel.Below="ic_wallpaper" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0,20,0,0" FontSize="24" FontFamily="DengXian" Foreground="White" />
+                <TextBlock x:Name="track_artistname" Text="Lea Michele" RelativePanel.Below="ic_tracktitle" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="0" FontSize="17.333" FontFamily="DengXian" Foreground="#FFFA695F" />
+
+                <RelativePanel RelativePanel.Above="dock_playlist" RelativePanel.Below="track_artistname"  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="0,25,0,0">
+                    <Image RelativePanel.LeftOf="ic_rewind" RelativePanel.AlignVerticalCenterWith="ic_play" Source="Assets/ic_shuffle.png" Width="20" Margin="0,0,15,0" />
+                    <Image x:Name="ic_play" RelativePanel.AlignHorizontalCenterWithPanel="True" Source="Assets/ic_play.png" Width="42" Height="48" Margin="0,0,0,10" />
+                    <Image x:Name="ic_rewind" RelativePanel.LeftOf="ic_play" RelativePanel.AlignVerticalCenterWith="ic_play" Source="Assets/ic_rewind.png" Width="40" Margin="0,0,60,0" />
+                    <Image x:Name="ic_fforward" RelativePanel.RightOf="ic_play" RelativePanel.AlignVerticalCenterWith="ic_play" Source="Assets/ic_forward.png" Width="40" Margin="60,0,0,0" />
+                    <Image RelativePanel.RightOf="ic_fforward" RelativePanel.AlignVerticalCenterWith="ic_play" Source="Assets/ic_repeat.png" Width="20" Margin="15,0,0,0" />
+                </RelativePanel>
+                <RelativePanel Height="50" x:Name="dock_playlist" RelativePanel.AlignBottomWithPanel="True" Background="#FF252E35" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                    <Image RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="Assets/ic_menu_flat.png" Width="41" Margin="60,0,0,0" />
+                    <TextBlock Text="Playlist" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Foreground="White" />
+                    <Image RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Source="Assets/ic_menu_flat.png" Width="41" Margin="0,0,60,0" />
+                </RelativePanel>
+            </RelativePanel>
+        </RelativePanel>
+
+    </Grid>
+</Page>
